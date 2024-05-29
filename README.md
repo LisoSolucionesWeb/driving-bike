@@ -1,8 +1,6 @@
 ![Portada](https://i.ibb.co/sW762Ps/Portada.png)
 
 
-# Driving Bike
-
 Este es un proyecto de prueba para una **landing page** de una empresa de bicicletas. Utiliza las siguientes tecnologías:
 
 - **Astro**: Un marco de trabajo moderno para construir sitios web rápidos y eficientes.
