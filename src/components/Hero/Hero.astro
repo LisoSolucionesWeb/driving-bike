@@ -1,0 +1,23 @@
+---
+import HeroConfig from "./HeroComponents/HeroConfig.astro"
+const img = ["https://i.pinimg.com/originals/0d/c4/0f/0dc40f1230f9fc0068c4a2881c720899.jpg", "https://wallpaperswide.com/download/mountain_bike_2-wallpaper-2400x1350.jpg", "https://wallpaper.forfun.com/fetch/c9/c96298c186ef17c4811b827444d34ae3.jpeg"]
+---
+
+<div>
+  <div class="swiper-container w-full h-5/6 mx-auto overflow-hidden mb-10">
+    <div class="swiper-wrapper">
+      {img.map((img, ind)=>(
+          <div class={`swiper-slide slide-${ind} img-${ind} text-center relative`}>
+            <img src={`${img}`} alt="">
+            <div class="absolute top-1/2 right-1/2">
+              <p>probando probando</p>
+
+            </div>
+          </div>
+        ))}
+    </div>
+  <div class="swiper-pagination"></div>
+</div>
+
+
+<HeroConfig/>
