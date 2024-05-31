@@ -5,7 +5,7 @@ const NavBar = () => {
     const itemsNavbar = ["Home", "Productos", "Service", "Contact Us"]
 
   return (
-    <div  className='w-full h-16 bg-blue-700'>
+    <div  className='hidden lg:block w-full h-16 bg-blue-700'>
         <ul className='flex justify-between w-4/5 mx-auto h-full'>
             {itemsNavbar.map((menus,key)=>(
                 <li key={key}
