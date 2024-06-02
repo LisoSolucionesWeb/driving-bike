@@ -1,5 +1,11 @@
-.Container-Products{
-    background: rgb(40,46,72);
-    background: linear-gradient(180deg, rgba(40,46,72,1) 8%, rgba(33,35,48,1) 16%);
+.Container-Products {
+    background: rgb(40, 46, 72);
+    background: linear-gradient(180deg, rgba(40, 46, 72, 1) 8%, rgba(33, 35, 48, 1) 16%);
     height: 100vh;
 }
+ 
+.product-list{
+    height: 600px;
+}
+
+
