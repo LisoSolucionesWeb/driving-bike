@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import NavBar from "../components/Header/Header"
 import Products from "../components/Products/Products"
 import Hero from "../components/Hero/Hero.astro"
+import ShippingPayment from "../components/ShippingPayment/ShippingPayment.astro";
 ---
 
 <Layout title="Driving Bike 🚲">
@@ -10,5 +11,6 @@ import Hero from "../components/Hero/Hero.astro"
 		<NavBar/>
 		<Hero/>
 		<Products client:load />
+		<ShippingPayment/>
 	</main>
 </Layout>
