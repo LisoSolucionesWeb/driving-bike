@@ -7,8 +7,8 @@ export default function Product({titulo, imagen, precio, descripcion, descuento,
       : descripcion;
 
     return (
-        <div className={`product-item  flex flex-col justify-between w-64 m-auto sm:w-full sm:h-full ${!ultimo ? 'border-gray-500 opacity-90 border-r' : ''}`} >
-            <img className="mx-auto w-64 h-64" src={imagen} alt={titulo} />
+        <div className={`product-item  flex flex-col justify-between h-full m-auto sm:w-full sm:h-full ${!ultimo ? 'border-gray-500 opacity-90 border-l' : ''}`} >
+            <img className="mx-auto w-64 h-64 object-contain object-center" src={imagen} alt={titulo} />
             <p className="text-center text-4xl text-zinc-200">
                 ${precio}
                 {descuento && (

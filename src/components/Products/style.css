@@ -3,9 +3,44 @@
     background: linear-gradient(180deg, rgba(40, 46, 72, 1) 8%, rgba(33, 35, 48, 1) 16%);
     height: 100vh;
 }
- 
-.product-list{
+
+.product-list {
     height: 600px;
 }
 
+.boton-sig {
+    position: absolute;
+    top: 50%;
+    right: -85px; 
+    color: rgb(9, 144, 255);
+    font-size: 40px; 
+    background-color: rgba(0, 0, 0, 0); 
+    border-radius: 50%; 
+    width: 80px; 
+    height: 80px; 
+    border: 1px solid rgb(9, 144, 255);
+  }
+  
+  .boton-ant {
+    position: absolute;
+    top: 50%;
+    left: -85px; 
+    color: rgb(9, 144, 255);
+    font-size: 40px; 
+    background-color: rgba(0, 0, 0, 0); 
+    border-radius: 50%; 
+    width: 80px;
+    height: 80px; 
+    border: 1px solid rgb(9, 144, 255);
+  }
+  
+
+@media screen and (max-width: 1023px) {
+    .boton-sig{
+        display: none;
+    }
+    .boton-ant{
+        display: none;
+    }
+  }
 
