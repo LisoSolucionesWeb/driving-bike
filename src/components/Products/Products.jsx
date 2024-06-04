@@ -1,6 +1,10 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+import { faChevronRight, faChevronLeft } from '@fortawesome/free-solid-svg-icons';
+
 
 import "./style.css";
 
@@ -10,11 +14,19 @@ import 'swiper/css/navigation';
 import Product from './components/Product';
 
 function CustomNextButton({ goNext }) {
-  return <button className='boton-sig' onClick={goNext}>{'>'}</button>;
+  return (
+    <button className='boton-sig' onClick={goNext}>
+      <FontAwesomeIcon icon={faChevronRight} className="icono" />
+    </button>
+  );
 }
 
 function CustomPrevButton({ goPrev }) {
-  return <button className='boton-ant' onClick={goPrev}>{'<'}</button>;
+  return (
+    <button className='boton-ant' onClick={goPrev}>
+      <FontAwesomeIcon icon={faChevronLeft} className="icono" />
+    </button>
+  );
 }
 
 
