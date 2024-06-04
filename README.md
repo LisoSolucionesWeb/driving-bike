@@ -21,3 +21,8 @@ Este es un proyecto de prueba para una **landing page** de una empresa de bicicl
   - `components/`: Componentes reutilizables.
   - `layouts/`: Layout principal.
 - `public/`: Archivos estáticos como imágenes y fuentes.
+
+## Links
+
+- [main](https://driving-bike.netlify.app).
+- [dev](https://driving-bike-dev.netlify.app).
