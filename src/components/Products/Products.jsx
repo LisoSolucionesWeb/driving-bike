@@ -1,14 +1,44 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
+import { Navigation } from 'swiper/modules';
+import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+import { faChevronRight, faChevronLeft } from '@fortawesome/free-solid-svg-icons';
+
+
 import "./style.css";
+
+import 'swiper/css';
+import 'swiper/css/navigation';
+
 import Product from './components/Product';
 
-export default function Products() {
+function CustomNextButton({ goNext }) {
   return (
-    <div className='Container-Products flex flex-col h-screen overflow-x-hidden justify-center'>
-      <div className='container m-auto w-2/3 text-center'>
+    <button className='boton-sig' onClick={goNext}>
+      <FontAwesomeIcon icon={faChevronRight} className="icono" />
+    </button>
+  );
+}
+
+function CustomPrevButton({ goPrev }) {
+  return (
+    <button className='boton-ant' onClick={goPrev}>
+      <FontAwesomeIcon icon={faChevronLeft} className="icono" />
+    </button>
+  );
+}
+
+
+export default function Products() {
+  const swiperRef = React.useRef(null);
+
+  return (
+    <div className='Container-Products flex flex-col justify-center'>
+      <div className='container m-auto w-2/3 text-center relative'>
         <h3 className='text-white text-3xl xl:text-6xl mb-28'>PRODUCTOS DESTACADOS</h3>
         <Swiper
+          modules={[Navigation]}
           breakpoints={{
             320: {
               slidesPerView: 1,
@@ -21,6 +51,9 @@ export default function Products() {
             }
           }}
           className='product-list'
+          onSwiper={(swiper) => {
+            swiperRef.current = swiper;
+          }}
         >
           <SwiperSlide>
             <Product 
@@ -30,6 +63,7 @@ export default function Products() {
               descripcion='El Casco de Bicicleta Aerodinámico Pro combina seguridad y rendimiento. Con su diseño avanzado y materiales ligeros, ofrece una protección superior sin comprometer la velocidad. Las múltiples ventilaciones aseguran una excelente circulación de aire, manteniéndote fresco en todo momento. Perfecto para ciclistas profesionales y aficionados que buscan lo mejor en equipamiento de ciclismo.'
               descuento={10}
               id='1'
+              ultimo={true}
             />
           </SwiperSlide>
           <SwiperSlide>
@@ -60,10 +94,12 @@ export default function Products() {
               descripcion='La Cámara de Aire Resistente a Pinchazos es tu mejor aliada contra los terrenos difíciles. Diseñada con tecnología avanzada, esta cámara reduce significativamente el riesgo de pinchazos, asegurando que tus viajes sean más seguros y sin interrupciones. Compatible con la mayoría de las bicicletas, es fácil de instalar y te permitirá disfrutar de tus rutas con total tranquilidad.'
               descuento={40}
               id='4'
-              ultimo={true}
+
             />
           </SwiperSlide>
-        </Swiper>
+          </Swiper>
+        <CustomPrevButton goPrev={() => swiperRef.current.slidePrev()} />
+        <CustomNextButton goNext={() => swiperRef.current.slideNext()} />
       </div>
     </div>
   )
