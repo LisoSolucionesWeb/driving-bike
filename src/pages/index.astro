@@ -4,6 +4,7 @@ import NavBar from "../components/Header/Header"
 import Products from "../components/Products/Products"
 import Hero from "../components/Hero/Hero.astro"
 import ShippingPayment from "../components/ShippingPayment/ShippingPayment.astro";
+import Footer from "../components/Footer/Footer.astro"
 ---
 
 <Layout title="Driving Bike 🚲">
@@ -12,5 +13,6 @@ import ShippingPayment from "../components/ShippingPayment/ShippingPayment.astro
 		<Hero/>
 		<Products client:load />
 		<ShippingPayment/>
+		<Footer/>
 	</main>
 </Layout>
