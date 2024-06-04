@@ -8,6 +8,15 @@
     height: 600px;
 }
 
+
+@media screen and (max-height: 769px) {
+    .Container-Products{
+        height: 800px;
+    }
+    
+}
+
+
 .boton-sig,
 .boton-ant {
     position: absolute;

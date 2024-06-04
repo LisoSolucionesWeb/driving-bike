@@ -29,7 +29,7 @@ export default function Product({titulo, imagen, precio, descripcion, descuento,
                 <button className="text-4xl bg-blue-500 rounded-full w-16 h-16 hover:bg-blue-800">
                     🛒
                 </button>
-                <button className="text-4xl  bg-gray-400 rounded-full w-16 h-16 hover:bg-blue-800">
+                <button className="text-4xl bg-gray-400 rounded-full w-16 h-16 hover:bg-blue-800">
                     👁️
                 </button>
             </div>
