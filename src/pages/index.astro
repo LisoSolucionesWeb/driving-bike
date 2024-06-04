@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import NavBar from "../components/Header/Header"
 import Products from "../components/Products/Products"
 import Hero from "../components/Hero/Hero.astro"
+import Features from "../components/Features/Features"
 import ShippingPayment from "../components/ShippingPayment/ShippingPayment.astro";
 import Footer from "../components/Footer/Footer.astro"
 
@@ -38,7 +39,41 @@ const productosDestacados = [
     imagen: "https://i.ibb.co/xLcG9TP/b98529257272-removebg-preview.png",
     precio: 400.00,
     descripcion: "La Cámara de Aire Resistente a Pinchazos es tu mejor aliada contra los terrenos difíciles. Diseñada con tecnología avanzada, esta cámara reduce significativamente el riesgo de pinchazos, asegurando que tus viajes sean más seguros y sin interrupciones. Compatible con la mayoría de las bicicletas, es fácil de instalar y te permitirá disfrutar de tus rutas con total tranquilidad.",
-    descuento: 40.00,
+    id: 4
+  }
+];
+
+const productosEspeciales = [
+  {
+    titulo: "Casco de Ciclismo de Competición",
+    imagen: "https://i.ibb.co/X4Q3RMh/png-clipart-capacete-asw-bike-elite-18-bicycle-helmets-motorcycle-helmets-orange-bicycle-removebg-pr.png",
+    precio: 100.00,
+    descripcion: "El Casco de Ciclismo de Competición combina seguridad y rendimiento. Con su diseño avanzado y materiales ligeros, ofrece una protección superior sin comprometer la velocidad. Las múltiples ventilaciones aseguran una excelente circulación de aire, manteniéndote fresco en todo momento. Perfecto para ciclistas profesionales y aficionados que buscan lo mejor en equipamiento de ciclismo.",
+    descuento: 10.00,
+    id: 1,
+    primero: true
+  },
+  {
+    titulo: "Faro Delantero de Alta Potencia para Bicicleta",
+    imagen: "https://i.ibb.co/L56Tccw/png-clipart-capacete-asw-bike-elite-18-bicycle-helmets-motorcycle-helmets-orange-bicycle.png",
+    precio: 200.00,
+    descripcion: "El Faro Delantero de Alta Potencia para Bicicleta garantiza máxima visibilidad y seguridad en tus paseos nocturnos. Con diferentes modos de iluminación y una batería de larga duración, este faro es esencial para cualquier ciclista. Fácil de instalar y resistente al agua, te acompañará en todas tus aventuras, brindándote la confianza para rodar de noche.",
+    descuento: 20.00,
+    id: 2
+  },
+  {
+    titulo: "Guantes de Ciclismo de Montaña",
+    imagen: "https://i.ibb.co/8Njnk3Y/png-transparent-cycling-glove-mountain-bike-bicycle-gloves-leather-mountain-biking-quality-removebg.png",
+    precio: 300.00,
+    descripcion: "Los Guantes de Ciclismo de Montaña ofrecen un agarre superior y confort en cada recorrido. Fabricados con materiales transpirables y acolchado estratégico, estos guantes reducen la fatiga y protegen tus manos. Ideales para largas jornadas de ciclismo, proporcionan una excelente adherencia al manillar en cualquier condición climática.",
+    descuento: 30.00,
+    id: 3
+  },
+  {
+    titulo: "Kit de Reparación de Emergencia para Bicicletas",
+    imagen: "https://i.ibb.co/dkzLVjb/D-774072-MLA72292883588-102023-C-removebg-preview.png",
+    precio: 400.00,
+    descripcion: "El Kit de Reparación de Emergencia para Bicicletas es tu mejor aliado contra los terrenos difíciles. Diseñado con tecnología avanzada, este kit reduce significativamente el riesgo de pinchazos, asegurando que tus viajes sean más seguros y sin interrupciones. Compatible con la mayoría de las bicicletas, es fácil de transportar y te permitirá disfrutar de tus rutas con total tranquilidad.",
     id: 4
   }
 ];
@@ -51,6 +86,8 @@ const productosDestacados = [
 		<NavBar/>
 		<Hero/>
 		<Products client:load produtos={productosDestacados} titulo="PRODUCTOS DESTACADOS" />
+		<Features/>
+    <Products client:load produtos={productosEspeciales} titulo="PRODUCTOS ESPECIALES" />
 		<ShippingPayment/>
 		<Footer/>
 	</main>
