@@ -5,6 +5,14 @@
     height: 100vh;
 }
 
+
+@media screen and (max-height: 820px) {
+    .container-Feature{
+        height: 1000px;
+    }
+    
+}
+
 .feature {
     display: flex;
     justify-content: center;
