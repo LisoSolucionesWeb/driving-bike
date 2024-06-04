@@ -1,13 +1,13 @@
 import "../style.css"
 
-export default function Product({titulo, imagen, precio, descripcion, descuento, ultimo, id}) {
+export default function Product({titulo, imagen, precio, descripcion, descuento, primero, id}) {
     const MAX_LENGTH = 100;
     const truncatedDescription = descripcion.length > MAX_LENGTH
       ? descripcion.substring(0, MAX_LENGTH) + '...'
       : descripcion;
 
     return (
-        <div className={`product-item  flex flex-col justify-between h-full m-auto sm:w-full sm:h-full ${!ultimo ? 'border-gray-500 opacity-90 border-l' : ''}`} >
+        <div className={`product-item  flex flex-col justify-between h-full m-auto sm:w-full sm:h-full ${!primero ? 'border-gray-500 opacity-90 border-l' : ''}`} >
             <img className="mx-auto w-64 h-64 object-contain object-center" src={imagen} alt={titulo} />
             <p className="text-center text-4xl text-zinc-200">
                 ${precio}

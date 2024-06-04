@@ -5,13 +5,52 @@ import Products from "../components/Products/Products"
 import Hero from "../components/Hero/Hero.astro"
 import ShippingPayment from "../components/ShippingPayment/ShippingPayment.astro";
 import Footer from "../components/Footer/Footer.astro"
+
+
+const productosDestacados = [
+  {
+    titulo: "Casco de Bicicleta Aerodinámico Pro",
+    imagen: "https://static.vecteezy.com/system/resources/thumbnails/021/909/467/small_2x/old-bike-helmet-png.png",
+    precio: 100.00,
+    descripcion: "El Casco de Bicicleta Aerodinámico Pro combina seguridad y rendimiento. Con su diseño avanzado y materiales ligeros, ofrece una protección superior sin comprometer la velocidad. Las múltiples ventilaciones aseguran una excelente circulación de aire, manteniéndote fresco en todo momento. Perfecto para ciclistas profesionales y aficionados que buscan lo mejor en equipamiento de ciclismo.",
+    descuento: 10.00,
+    id: 1,
+    primero: true
+  },
+  {
+    titulo: "Luces LED para Bicicleta Nocturna",
+    imagen: "https://i.ibb.co/P9LcpCq/luces-led-para-bicicleta-usb-recargables-gadnic1-10dc7b443da200c4ad16917733506029-480-0-removebg-pre.png",
+    precio: 200.00,
+    descripcion: "Las Luces LED para Bicicleta Nocturna garantizan máxima visibilidad y seguridad en tus paseos nocturnos. Con diferentes modos de iluminación y una batería de larga duración, estas luces son esenciales para cualquier ciclista. Fáciles de instalar y resistentes al agua, te acompañarán en todas tus aventuras, brindándote la confianza para rodar de noche.",
+    descuento: 20.00,
+    id: 2
+  },
+  {
+    titulo: "Guantes de Ciclismo Antideslizantes",
+    imagen: "https://i.ibb.co/1QrwvTY/png-clipart-giro-d-italia-cycling-glove-cycling-glove-bicycle-cycling-removebg-preview.png",
+    precio: 300.00,
+    descripcion: "Los Guantes de Ciclismo Antideslizantes ofrecen un agarre superior y confort en cada recorrido. Fabricados con materiales transpirables y acolchado estratégico, estos guantes reducen la fatiga y protegen tus manos. Ideales para largas jornadas de ciclismo, proporcionan una excelente adherencia al manillar en cualquier condición climática.",
+    descuento: 30.00,
+    id: 3
+  },
+  {
+    titulo: "Cámara de Aire Resistente a Pinchazos",
+    imagen: "https://i.ibb.co/xLcG9TP/b98529257272-removebg-preview.png",
+    precio: 400.00,
+    descripcion: "La Cámara de Aire Resistente a Pinchazos es tu mejor aliada contra los terrenos difíciles. Diseñada con tecnología avanzada, esta cámara reduce significativamente el riesgo de pinchazos, asegurando que tus viajes sean más seguros y sin interrupciones. Compatible con la mayoría de las bicicletas, es fácil de instalar y te permitirá disfrutar de tus rutas con total tranquilidad.",
+    descuento: 40.00,
+    id: 4
+  }
+];
+
 ---
+
 
 <Layout title="Driving Bike 🚲">
 	<main>
 		<NavBar/>
 		<Hero/>
-		<Products client:load />
+		<Products client:load produtos={productosDestacados} titulo="PRODUCTOS DESTACADOS" />
 		<ShippingPayment/>
 		<Footer/>
 	</main>
