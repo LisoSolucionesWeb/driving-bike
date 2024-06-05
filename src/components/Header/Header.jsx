@@ -5,7 +5,7 @@ import TopHeader from "./TopHeader/TopHeader"
 const Header = () => {
   return (
     <div className='flex flex-col mt-0 h-fit'>
-        <TopHeader/>
+        <TopHeader client:load/>
         <NavBar/>
     </div>
   )

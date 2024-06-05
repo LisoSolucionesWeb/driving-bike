@@ -2,7 +2,7 @@ import React from 'react'
 
 const NavBar = () => {
 
-    const itemsNavbar = ["Home", "Productos", "Service", "Contact Us"]
+    const itemsNavbar = ["Inicio", "Productos", "Servicios", "Contáctanos"]
 
   return (
     <div  className='hidden lg:block w-full h-16 bg-blue-700'>
