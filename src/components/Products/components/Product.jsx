@@ -1,7 +1,11 @@
 import "../style.css"
+import { faCartShopping, faEye } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+
 
 export default function Product({titulo, imagen, precio, descripcion, descuento, primero, id}) {
-    const MAX_LENGTH = 100;
+    const MAX_LENGTH = 50;
     const truncatedDescription = descripcion.length > MAX_LENGTH
       ? descripcion.substring(0, MAX_LENGTH) + '...'
       : descripcion;
@@ -26,11 +30,11 @@ export default function Product({titulo, imagen, precio, descripcion, descuento,
             <h3 className="text-blue-400 text-2xl text-center ">{titulo}</h3>
             <p className="text-zinc-400 text-xl text-center">{truncatedDescription}</p>
             <div className="mx-auto flex gap-5 mt-5">
-                <button className="text-4xl bg-blue-500 rounded-full w-16 h-16 hover:bg-blue-800">
-                    🛒
+                <button className="text-4xl bg-blue-500 rounded-full w-16 h-16 hover:bg-blue-800 flex items-center justify-center">
+                    <FontAwesomeIcon className="text-white text-2xl" icon={faCartShopping} />
                 </button>
-                <button className="text-4xl bg-gray-400 rounded-full w-16 h-16 hover:bg-blue-800">
-                    👁️
+                <button className="text-4xl bg-gray-400 rounded-full w-16 h-16 hover:bg-blue-800 flex items-center justify-center">
+                    <FontAwesomeIcon className="text-white text-2xl" icon={faEye} />
                 </button>
             </div>
         </div>

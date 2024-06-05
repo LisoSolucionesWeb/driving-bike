@@ -1,15 +1,14 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from 'swiper/modules';
+import { Navigation, Autoplay } from 'swiper/modules'; // Importa el módulo Autoplay
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
 import { faChevronRight, faChevronLeft } from '@fortawesome/free-solid-svg-icons';
-
 
 import "./style.css";
 
 import 'swiper/css';
 import 'swiper/css/navigation';
+import 'swiper/css/autoplay'; // Importa el CSS del Autoplay
 
 import Product from './components/Product';
 
@@ -29,8 +28,7 @@ function CustomPrevButton({ goPrev }) {
   );
 }
 
-
-export default function Products({produtos, titulo}) {
+export default function Products({ produtos, titulo }) {
   const swiperRef = React.useRef(null);
 
   return (
@@ -38,18 +36,26 @@ export default function Products({produtos, titulo}) {
       <div className='container m-auto w-2/3 text-center relative'>
         <h3 className='text-white text-3xl xl:text-6xl mb-28'>{titulo}</h3>
         <Swiper
-          modules={[Navigation]}
+          modules={[Navigation, Autoplay]} 
           breakpoints={{
             320: {
               slidesPerView: 1,
+
             },
             640: {
               slidesPerView: 2,
+
             },
             1024: {
               slidesPerView: 3,
+     
             }
           }}
+          autoplay={{
+            delay: 4400,
+            disableOnInteraction: false,
+          }}
+
           className='product-list'
           onSwiper={(swiper) => {
             swiperRef.current = swiper;
@@ -68,7 +74,7 @@ export default function Products({produtos, titulo}) {
               />
             </SwiperSlide>
           ))}
-          </Swiper>
+        </Swiper>
         <CustomPrevButton goPrev={() => swiperRef.current.slidePrev()} />
         <CustomNextButton goNext={() => swiperRef.current.slideNext()} />
       </div>
