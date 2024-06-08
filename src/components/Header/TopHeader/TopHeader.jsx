@@ -45,16 +45,16 @@ const TopHeader = () => {
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" onClick={handleButtonBurguer} className="size-12 absolute top-5 text-slate-200">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                 </svg>
-                <div className={`py-3 px-5 absolute top-10 right-full border translate-y-1/2 bg-slate-200/80 rounded-md border-blue-500 z-10 transition duration-300 ease-in transform ${burguerButton === true? "opacity-100 visible" : "-translate-x-full opacity-0 "}`}>
+                <div className={`py-5 px-5 absolute top-10 right-full border translate-y-16 bg-slate-200 rounded-md border-blue-500 z-10 transition duration-300 ease-in transform ${burguerButton === true? "opacity-100 visible" : "-translate-x-full opacity-0 "}`}>
                     {/* cruz cerrar menu  ↓*/}
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" onClick={handleButtonClosedBurguer} className="text-black absolute top-2 right-2 size-6">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
                     </svg>
-                    <ul className='flex flex-col gap-1 mt-3'>
-                        <li className='text-lg hover:underline font-semibold'>Inicio</li>
-                        <li className='text-lg hover:underline font-semibold'>Productos</li>
-                        <li className='text-lg hover:underline font-semibold'>Servicios</li>
-                        <li className='text-lg hover:underline font-semibold'>Contactanos</li>
+                    <ul className='flex flex-col items-center gap-8 mt-3'>
+                        <li className='text-lg hover:text-blue-500 hover:underline font-semibold'>Inicio</li>
+                        <li className='text-lg hover:text-blue-500 hover:underline font-semibold'>Productos</li>
+                        <li className='text-lg hover:text-blue-500 hover:underline font-semibold'>Servicios</li>
+                        <li className='text-lg hover:text-blue-500 hover:underline font-semibold'>Contactanos</li>
                     </ul>
                 </div>
             </div>
