@@ -1,0 +1,18 @@
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+<!-- Importa el JS de Swiper.js y inicializa el slider -->
+<script is:inline src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script is:inline>
+  new Swiper (".swiper-container", {
+    direction: "horizontal",
+    loop: true,
+
+    autoplay: {
+        delay: 5000,
+    },
+    // Cambia el efecto de transición a "cube" o "coverflow"
+    effect: 'fade',
+    //slidesPerView: 1, // Muestra solo una diapositiva a la vez
+    centeredSlides: true, // Centra el slider activo
+});
+</script>

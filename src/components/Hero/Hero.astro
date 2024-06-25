@@ -1,0 +1,48 @@
+---
+import HeroConfig from "./HeroComponents/HeroConfig.astro"
+const img = [{img:"https://i.pinimg.com/originals/0d/c4/0f/0dc40f1230f9fc0068c4a2881c720899.jpg",
+              text1: "Maximo confort y duracion",
+              text2: "COMODIDAD Y AVENTURA"
+}, {          img:"https://wallpaperswide.com/download/mountain_bike_2-wallpaper-2400x1350.jpg",
+              text1:"Diseño moderno y elegante",
+              text2:"COMODA PARA LARGOS VIAJES"
+}, {          img:"https://wallpaper.forfun.com/fetch/c9/c96298c186ef17c4811b827444d34ae3.jpeg",
+              text1:"Versátil para cualquier terreno",
+              text2:"AGIL Y MANIOBRABLES"
+}]
+---
+
+<div>
+  <div class="swiper-container w-full h-5/6 mx-auto overflow-hidden">
+    <div class="swiper-wrapper">
+      {img.map((img, ind)=>(
+          <div class={`swiper-slide slide-${ind} img-${ind} text-center relative`}>
+            <img src={`${img.img}`} alt="">
+              
+            <div class="absolute top-1/4 left-2/4 transform -translate-x-1/2 -translate-y-1/2 lg:px-5 sm:px-2 px-1 lg:py-3 py-2 rounded-lg backdrop-blur-sm bg-blue-600/30">
+              <p class="lg:text-3xl md:text-lg sm:text-base text-slate-100 font-bold">{img.text1}</p>
+            </div>
+            <div class="absolute bottom-2/4 right-2/4 transform translate-x-1/2 translate-y-3/4 px-2 py-3 rounded-lg flex flex-col">
+              <p class="lg:text-5xl md:text-2xl sm:text-lg text-base text-white font-bold text-center lg:mb-8 sm:mb-4 mb-2">{img.text2}</p>
+              <div class="lg:px-5 sm:px-2 px-1 lg:py-3 sm:py-2 py-1 border-2 rounded-xl border-cyan-500  mx-auto hover:cursor-pointer hover:bg-blue-700/70 flex justify-center items-center">
+                <p class="text-white lg:text-xl sm:text-lg text-sm">Mas..</p>
+
+              </div>
+            </div>
+          </div>
+        ))}
+    </div>
+  </div>
+</div>
+
+
+<HeroConfig/>
+
+
+<style>
+  .translate-center {
+    translate: 50%, 50%;
+  }
+
+
+</style>
