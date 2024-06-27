@@ -46,16 +46,18 @@ const TopHeader = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                 </svg>
                 {/* Sidebar */}
-                <div className={`h-screen sm:w-64 w-48 fixed top-0 right-0 border bg-gradient-to-br from-blue-600 to-sky-700 rounded-md border-blue-500 z-10 transition-transform duration-300 ease-in-out transform ${burguerButton ? "translate-x-0" : "translate-x-full"}`}>
+                <div className={`h-screen sm:w-64 w-48 fixed top-0 right-0 border bg-gradient-to-br from-blue-800 to-sky-600 rounded-md border-blue-700 z-10 transition-transform duration-300 ease-in-out transform ${burguerButton ? "translate-x-0" : "translate-x-full"}`}>
                     {/* cruz cerrar menu  ↓*/}
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" onClick={handleButtonClosedBurguer} className="text-black absolute top-2 right-2 size-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" onClick={handleButtonClosedBurguer} className="text-white absolute bottom-24 right-1/2 translate-x-1/2 size-10">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
                     </svg>
+
+                    <h3 className='absolute top-24 right-1/2 translate-x-1/2 | text-transparent bg-clip-text bg-gradient-to-b from-blue-200 via-blue-400 to-blue-500 underline font-bold italic text-3xl'>MENU</h3>
                     <ul className='h-full flex flex-col justify-center items-center gap-8 mt-3'>
-                        <li className='text-xl text-white hover:text-blue-500 hover:underline font-bold'>Inicio</li>
-                        <li className='text-xl text-white hover:text-blue-500 hover:underline font-bold'>Productos</li>
-                        <li className='text-xl text-white hover:text-blue-500 hover:underline font-bold'>Servicios</li>
-                        <li className='text-xl text-white hover:text-blue-500 hover:underline font-bold'>Contactanos</li>
+                        <li className='p-5 rounded-lg text-xl text-white  hover:bg-gradient-to-b hover:from-black hover:to-blue-700 hover:underline font-bold'>Inicio</li>
+                        <li className='p-5 rounded-lg text-xl text-white  hover:bg-gradient-to-b hover:from-black hover:to-blue-700 hover:underline font-bold'>Productos</li>
+                        <li className='p-5 rounded-lg text-xl text-white  hover:bg-gradient-to-b hover:from-black hover:to-blue-700 hover:underline font-bold'>Servicios</li>
+                        <li className='p-5 rounded-lg text-xl text-white  hover:bg-gradient-to-b hover:from-black hover:to-blue-700 hover:underline font-bold'>Contactanos</li>
                     </ul>
                 </div>
             </div>
